@@ -1,7 +1,13 @@
-import Hello from '~/components/Hello';
+import { Header } from './components/Header';
+import { Pokedex } from './pokedex/Pokedex';
 
 function App() {
-  return <Hello />;
+  return (
+    <>
+      <Header />
+      <Pokedex />
+    </>
+  );
 }
 
 export default App;
