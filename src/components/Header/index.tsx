@@ -4,14 +4,16 @@ import logoPokemon from '../../assets/Logo.svg';
 import styles from './header.module.scss';
 export const Header = () => {
   return (
-    <Container maxW='100%' className={styles.container}>
-      <Flex justify='space-around' alignItems='center' margin='0 9rem' gap='2'>
-        <Box className={styles.imageContainer} p='2'>
+    <Container maxW='100%' height='95px' className={styles.container}>
+      <Flex justify='space-between' alignItems='center' margin='0 9rem'>
+        <Box className={styles.imageContainer}>
           <Image boxSize='100px' alt='logo do pokemon' src={logoPokemon} />
         </Box>
         <Spacer />
         <ButtonGroup gap='2'>
-          <Button colorScheme='teal'>Home</Button>
+          <Button>Home</Button>
+          <Button>Home</Button>
+          <Button>Home</Button>
         </ButtonGroup>
       </Flex>
     </Container>
