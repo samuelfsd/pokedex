@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 import { Button } from '@chakra-ui/react';
 import { listPokemons, PokemonListInterface } from '~/pokemon/services/listPokemons';
 import { getPokemonDetails } from '~/pokemon/services/getPokemonDetails';
+import { PokemonDetail } from '~/pokemon/interfaces/PokemonDetail';
 
 export const Pokedex = () => {
   const [pokemons, setPokemons] = useState<PokemonListInterface[]>([]);
   const [selectedPokemon, setSelectedPokemon] = useState<PokemonListInterface | undefined>(
     undefined,
   );
-  const [selectedPokemonsDetails, setSelectedPokemonsDetails] = useState<any | undefined>(
+  const [selectedPokemonsDetails, setSelectedPokemonsDetails] = useState<PokemonDetail | undefined>(
     undefined,
   );
 

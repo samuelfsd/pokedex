@@ -1,21 +1,11 @@
 import axios from 'axios';
 
-export interface PokemonListInterface {
-  name: string;
-  url: string;
-}
+import { PokemonDetail } from '../interfaces/PokemonDetail';
 
-interface GetPokemonDetailsInterface {
-  count: number;
-  next: string | null;
-  previous: null | string;
-  results: PokemonListInterface[];
-}
-
-export async function getPokemonDetails(name: string): Promise<GetPokemonDetailsInterface> {
+export async function getPokemonDetails(name: string): Promise<PokemonDetail> {
   const endpoint = `https://pokeapi.co/api/v2/pokemon/${name}`;
 
-  const response = await axios.get<GetPokemonDetailsInterface>(endpoint);
+  const response = await axios.get<PokemonDetail>(endpoint);
 
   return response.data;
 }
